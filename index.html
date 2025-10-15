@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدرسة عبدالله بن عمرو</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-left">
+            <img src="oman2040_logo.png" alt="شعار رؤية عمان 2040"> 
+        </div>
+        <div class="logo-center">
+            <img src="moe_logo.png" alt="شعار وزارة التربية والتعليم">
+        </div>
+        <div class="logo-right">
+            <img src="school_logo.png" alt="شعار مدرسة عبدالله بن عمرو">
+        </div>
+    </header>
+
+    <main>
+        <section class="school-info">
+            <h1>مدرسة عبدالله بن عمرو للتعليم الأساسي</h1>
+            
+            <p class="school-description">
+                مدرسة عبدالله بن عمرو هي منارة للعلم والمعرفة، تهدف إلى بناء جيل واعٍ ومثقف، ملتزم بقيم مجتمعه ومساهم فعال في تحقيق رؤية عمان 2040. نحن نسعى لتوفير بيئة تعليمية محفزة تشجع على الإبداع والابتكار والتميز الأكاديمي.
+            </p>
+            
+            <img src="school_expressive_image.jpg" alt="صورة معبرة عن المدرسة" class="expressive-img">
+        </section>
+
+        <hr>
+
+        <section class="contact-form-section">
+            <h2>إرسال رسالة إلى إدارة المدرسة</h2>
+            <div class="form-container">
+                <form action="https://formspree.io/f/xkgqkzbe" method="POST">
+                    
+                    <label for="sender_name">اسم المرسل:</label>
+                    <input type="text" id="sender_name" name="الاسم" required>
+
+                    <label for="sender_email">بريد المرسل:</label>
+                    <input type="email" id="sender_email" name="_replyto" required> 
+
+                    <label for="sender_phone">رقم الهاتف:</label>
+                    <input type="tel" id="sender_phone" name="رقم_الهاتف" required>
+
+                    <label for="message_subject">عنوان الرسالة:</label>
+                    <input type="text" id="message_subject" name="عنوان_الرسالة" required>
+
+                    <label for="message_content">محتوى الرسالة (بحد أقصى 500 حرف):</label>
+                    <textarea id="message_content" name="محتوى_الرسالة" rows="8" maxlength="500" required></textarea>
+
+                    <div class="form-buttons">
+                        <button type="submit">إرسال</button>
+                        <button type="reset">مسح محتوى الرسالة</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>جميع الحقوق محفوظة</p>
+        <p>تصميم الأستاذ محمد راشد المعمري</p>
+    </footer>
+
+</body>
+</html>

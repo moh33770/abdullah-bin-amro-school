@@ -1,0 +1,207 @@
+/*
+ * تصميم CSS لموقع مدرسة عبدالله بن عمرو
+ * الألوان هادئة: (مثلاً: أزرق سماوي فاتح، بيج، رمادي ناعم)
+ */
+
+:root {
+    --primary-color: #4682B4; /* أزرق فولاذي هادئ */
+    --secondary-color: #F5F5DC; /* بيج هادئ للخلفيات الفاتحة */
+    --text-color: #333;
+    --light-gray: #EAEAEA;
+    --border-radius: 8px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    text-align: right;
+    
+    /* خلفية الصفحة: صورة مدرسة مع محاذاة للوسط */
+    /* تأكد من وجود صورة school_background.jpg */
+    background-image: url('school_background.jpg'); 
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* طبقة شفافة فوق الخلفية لضمان وضوح النص */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    z-index: -1;
+}
+
+/* -------------------- رأس الصفحة (Header) -------------------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+    height: 60px;
+    max-width: 100px;
+    object-fit: contain;
+}
+
+.logo-left { text-align: left; flex-basis: 30%; }
+.logo-center { text-align: center; flex-basis: 40%; }
+.logo-right { text-align: right; flex-basis: 30%; }
+
+/* -------------------- المحتوى الرئيسي (Main) -------------------- */
+main {
+    padding: 20px 5%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.school-info {
+    /* 🌟 التعديل: توسيط كل المحتوى النصي داخل هذا القسم (العنوان والوصف) */
+    text-align: center; 
+}
+
+.school-info h1 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--light-gray);
+    padding-bottom: 10px;
+    /* حجم افتراضي للعنوان، مثلاً 2.5rem */
+    font-size: 2.5rem; 
+}
+
+/* 🌟 التعديل: توسيط النص وتعديل حجم الخط ليصبح أصغر من العنوان بقليل */
+.school-description {
+    font-size: 1.2rem; /* أصغر من 2.5rem بقليل ومناسب للقراءة */
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 15px auto; /* توسيط الكتلة النصية نفسها */
+}
+
+.expressive-img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    margin: 20px 0;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* -------------------- مربع إرسال رسالة (Form) -------------------- */
+.contact-form-section {
+    padding-top: 20px;
+}
+
+.contact-form-section h2 {
+    color: var(--primary-color);
+    text-align: center; /* توسيط عنوان النموذج */
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius);
+    text-align: right; /* إعادة محاذاة النص داخل النموذج لليمين */
+}
+
+/* ... تنسيقات حقول النموذج والأزرار كما هي ... */
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="tel"],
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.form-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.form-container button[type="reset"] {
+    background-color: #ccc;
+    color: var(--text-color);
+}
+
+.form-container button:hover {
+    opacity: 0.9;
+}
+
+
+/* -------------------- ذيل الصفحة (Footer) -------------------- */
+footer {
+    /* ✅ التوسيط المطلوب للذيل */
+    text-align: center; 
+    padding: 15px 0;
+    margin-top: 30px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+/* تنسيقات استجابة للمحمول */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header div {
+        margin-bottom: 10px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .form-buttons button {
+        margin-bottom: 10px;
+    }
+}
